@@ -56,7 +56,7 @@ while True:
 
   if choice1 == 'lottery':
         cash -= 5
-        if r.randint(1, 1000) == 1:
+        if r.randint(1, 100) == 1:
             print('we have a winner')
             cash += r.randint(1000000, 10000000000)
         else:
