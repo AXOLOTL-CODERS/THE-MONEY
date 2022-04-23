@@ -12,6 +12,7 @@ nobill = False
 
 print('THE MONEY(now with stock)')
 while True:
+  bills = r.randint(1,2)
   print("food levels are ",food)
   food-=1
   print('you have $' + str(cash))
