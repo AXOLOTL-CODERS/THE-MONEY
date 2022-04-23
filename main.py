@@ -140,33 +140,7 @@ while True:
         cheat = input()
         my_secret = os.environ['cheat1']
         if cheat == my_secret:
-            print('money added')
-            cash += 1000000000000000
-        my_secret = os.environ['cheat2']
-        if cheat == my_secret:
-            sus.exit('your broke')
-        my_secret = os.environ['cheat3']
-        if cheat == my_secret:
-            cash = cash * 3
-        my_secret = os.environ['cheat4']
-        if cheat == my_secret:
-            cash += r.randint(1000000, 10000000000)
-        my_secret = os.environ['cheat5']
-        if cheat == my_secret:
-            cash += 69420
-        my_secret = os.environ['cheat6']
-        if cheat == my_secret:
-            cash += 1000000
-        my_secret = os.environ['cheat7']
-        if cheat == my_secret:
-            cash = cash / 2
-        my_secret = os.environ['cheat8']
-        if cheat == my_secret:
-            nobill = True
-        my_secret = os.environ['cheat9']
-        if cheat == my_secret:
-          print('hi')
-
+            cash = 2095
 
   if bills == 2 and not nobill:
         pay = input('You need to pay your bills. Will you? ')
