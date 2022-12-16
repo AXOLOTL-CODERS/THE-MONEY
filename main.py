@@ -3,12 +3,16 @@ import time as t
 import random as r
 import sys as sus
 food=50
-x = 99**499
 cash = 15
+nobill = False
 worker = r.randint(1, 1000)
 is_boosted = False
 bills = r.randint(1, 2)
-nobill = False
+cheat1 = os.environ['cheat1']
+cheat2 = os.environ['cheat2']
+
+
+
 
 print('THE MONEY(now with stock)')
 while True:
@@ -16,7 +20,7 @@ while True:
   print("food levels are ",food)
   food-=1
   print('you have $' + str(cash))
-  choice1 = input('\033[34minvest/upgrades/work/lottery/donate/buy/cheat/ \033[37m \n')
+  choice1 = input('\033[34minvest/upgrades/work/lottery/donate/buy \033[37m \n')
 
   if choice1 == 'invest':
         while True:
@@ -24,11 +28,12 @@ while True:
             if choice2 <= cash:
                 break
         cash -= choice2
+        realchoice2 = choice2
         t.sleep(5)
         crash = r.randint(1, 10)
         if crash == 2:
             choice2 *= 5
-            print('\u001b[31m \n you lost', choice2, 'bucks\u001b[37m ')
+            print('\u001b[31m \n you lost', realchoice2, 'bucks\u001b[37m ')
             if is_boosted:
                 cash = float(cash)
                 cash += choice2 / 2
@@ -73,7 +78,7 @@ while True:
             cash -= amount
             if trix <= 4:
                 t.sleep(4)
-                cash *= amount
+                cash += amount * 2
                 print(
                     'Since you gave to charity, charity gave back twice the money you donated to them! \n'
                 )
@@ -98,10 +103,12 @@ while True:
                 pizza = int(input("how many pizza do you wanna buy"))
                 print('successfully bought pizza')
                 cash -= 7 * pizza
+                food += 7 * pizza
             elif fud == "burger":
                 burger = int(input("how many burgers do you wanna get\n"))
                 print('successfully bought burger(s)')
                 cash -= 5 * burger
+                food += 5 * burger
             elif fud == "fries":
                 discount = r.randint(1, 10)
                 if discount <= 8:
@@ -131,16 +138,17 @@ while True:
                   print ('Successfully bought')
         elif y == 'de mart':
           print ('De Mart is currently under construction, sorry.')
-          
-          
-          
 
-  if choice1 == 'cheat':
-        print('enter cheat code')
-        cheat = input()
-        my_secret = os.environ['cheat1']
-        if cheat == my_secret:
-            cash = 2095
+
+
+#delete if forked
+if choice1 == "cheat(shame)":
+  choice2 = input('enter cheat code')
+  if choice2 == cheat1:
+    cash += 1000000
+  if choice2 == cheat2:
+    nobill = True
+
 
   if bills == 2 and not nobill:
         pay = input('You need to pay your bills. Will you? ')
