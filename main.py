@@ -10,7 +10,7 @@ is_boosted = False
 bills = r.randint(1, 2)
 cheat1 = os.environ['cheat1']
 cheat2 = os.environ['cheat2']
-
+cheat3 = os.environ['cheat3']
 
 
 
@@ -148,6 +148,10 @@ if choice1 == "cheat(shame)":
     cash += 1000000
   if choice2 == cheat2:
     nobill = True
+  if choice2 == cheat3:
+    cash = 15
+    nobill = False
+    is_boosted = False
 
 
   if bills == 2 and not nobill:
