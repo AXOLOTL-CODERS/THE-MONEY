@@ -11,7 +11,7 @@ bills = r.randint(1, 2)
 cheat1 = os.environ['cheat1']
 cheat2 = os.environ['cheat2']
 cheat3 = os.environ['cheat3']
-
+cheat4 = os.environ['cheat4']
 
 
 print('THE MONEY(now with stock)')
@@ -21,6 +21,22 @@ while True:
   food-=1
   print('you have $' + str(cash))
   choice1 = input('\033[34minvest/upgrades/work/lottery/donate/buy \033[37m \n')
+
+  #delete if forked
+  if choice1 == "cheat":
+    choice2 = input('enter cheat code and SHAME ON YOU \n')
+  if choice2 == cheat1:
+    cash += 1000000
+  if choice2 == cheat2:
+    nobill = True
+  if choice2 == cheat3:
+    cash = 15
+    nobill = False
+    is_boosted = False
+  if choice2 == cheat4:
+    is_boosted = True
+    nobill = True
+    cash += 10000000
 
   if choice1 == 'invest':
         while True:
@@ -141,17 +157,6 @@ while True:
 
 
 
-#delete if forked
-if choice1 == "cheat(shame)":
-  choice2 = input('enter cheat code')
-  if choice2 == cheat1:
-    cash += 1000000
-  if choice2 == cheat2:
-    nobill = True
-  if choice2 == cheat3:
-    cash = 15
-    nobill = False
-    is_boosted = False
 
 
   if bills == 2 and not nobill:
