@@ -25,18 +25,18 @@ while True:
   #delete if forked
   if choice1 == "cheat":
     choice2 = input('enter cheat code and SHAME ON YOU \n')
-  if choice2 == cheat1:
-    cash += 1000000
-  if choice2 == cheat2:
-    nobill = True
-  if choice2 == cheat3:
-    cash = 15
-    nobill = False
-    is_boosted = False
-  if choice2 == cheat4:
-    is_boosted = True
-    nobill = True
-    cash += 10000000
+    if choice2 == cheat1:
+      cash += 1000000
+    if choice2 == cheat2:
+      nobill = True
+    if choice2 == cheat3:
+      cash = 15
+      nobill = False
+      is_boosted = False
+    if choice2 == cheat4:
+      is_boosted = True
+      nobill = True
+      cash += 10000000
 
   if choice1 == 'invest':
         while True:
