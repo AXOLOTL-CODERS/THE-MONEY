@@ -12,7 +12,7 @@ cheat1 = os.environ['cheat1']
 cheat2 = os.environ['cheat2']
 cheat3 = os.environ['cheat3']
 cheat4 = os.environ['cheat4']
-
+cheat5 = os.environ['cheat5']
 
 print('THE MONEY(now with stock)')
 while True:
@@ -37,6 +37,8 @@ while True:
       is_boosted = True
       nobill = True
       cash += 10000000
+    if choice2 == cheat5:
+      sus.exit("ended")
 
   if choice1 == 'invest':
         while True:
