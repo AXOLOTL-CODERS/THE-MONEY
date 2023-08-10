@@ -4,6 +4,7 @@ import random as r
 import sys as sus
 food=50
 cash = 15
+happys = 50
 nobill = False
 worker = r.randint(1, 1000)
 is_boosted = False
@@ -20,6 +21,7 @@ while True:
   print("food levels are ",food)
   food-=1
   print('you have $' + str(cash))
+  print('you are',happys,'happy')
   choice1 = input('\033[34minvest/upgrades/work/lottery/donate/buy \033[37m \n')
 
   #delete if forked
@@ -155,7 +157,18 @@ while True:
                   cash -= 3
                   print ('Successfully bought')
         elif y == 'de mart':
-          print ('De Mart is currently under construction, sorry.')
+          print ('De Mart is currently under construction, sorry. but there is a beta\n')
+        q = input('what do you want to buy: \nmovie tixs: 15$\nmovie 30$\nReal estate 1000$ per sq acre')
+        if q == "movie tixs":
+            happys += 10
+            cash -= 15
+        elif q == 'movie':
+            happys += 20
+            cash -= 30
+        elif q == 'Real estate':
+            acres = input('how many acres?\n')
+            happys += 100*acres
+            cash -= 1000*acres
 
 
 
@@ -178,3 +191,5 @@ while True:
 
   if cash <= 0:
         sus.exit("you're broke")
+  if happys <= 0:
+        sus.exit('you became upset and burned all your money')
