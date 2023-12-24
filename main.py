@@ -9,12 +9,13 @@ nobill = False
 worker = r.randint(1, 1000)
 is_boosted = False
 bills = r.randint(1, 2)
+"""
 cheat1 = os.environ['cheat1']
 cheat2 = os.environ['cheat2']
 cheat3 = os.environ['cheat3']
 cheat4 = os.environ['cheat4']
 cheat5 = os.environ['cheat5']
-
+"""
 print('THE MONEY(now with stock)')
 while True:
   bills = r.randint(1,2)
