@@ -193,4 +193,4 @@ while True:
   if cash <= 0:
         sus.exit("you're broke")
   if happys <= 0:
-        sus.exit('you became upset and burned all your money')
+        sus.exit('you became upset and burned all your money then died of cronic depression')
